@@ -27,14 +27,14 @@ public class Mensaje implements Serializable {
     @JsonIgnoreProperties({"messages", "client", "reservations"})
     private Motorbike motorbike;
         
-    public Motorbike getMoto() {
+    public Motorbike getMotorbike() {
         return motorbike;
     }
 
-    public void setMoto(Motorbike motorbike) {
+    public void setMotorbike(Motorbike motorbike) {
         this.motorbike = motorbike;
     }
-
+  
     @ManyToOne
     @JoinColumn(name="clientId")
     @JsonIgnoreProperties({"messages", "reservations", "client"})
@@ -63,7 +63,5 @@ public class Mensaje implements Serializable {
     public void setClient(Cliente client) {
         this.client = client;
     }
-    
-    
     
 }

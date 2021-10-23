@@ -37,11 +37,11 @@ public class Reservaciones implements Serializable  {
     @JsonIgnoreProperties("reservations")
     private Motorbike motorbike;
 
-    public Motorbike getMoto() {
+    public Motorbike getMotorbike() {
         return motorbike;
     }
 
-    public void setMoto(Motorbike motorbike) {
+    public void setMotorbike(Motorbike motorbike) {
         this.motorbike = motorbike;
     }
 
@@ -99,7 +99,5 @@ public class Reservaciones implements Serializable  {
     public void setScore(String score) {
         this.score = score;
     }
-    
-    
     
 }

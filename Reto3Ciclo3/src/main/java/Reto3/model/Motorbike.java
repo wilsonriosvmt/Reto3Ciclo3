@@ -106,5 +106,30 @@ public class Motorbike implements Serializable{
     public void setDescription(String description) {
         this.description = description;
     }
+
+    public Categoria getCategory() {
+        return category;
+    }
+
+    public void setCategory(Categoria category) {
+        this.category = category;
+    }
+
+    public List<Mensaje> getMessages() {
+        return messages;
+    }
+
+    public void setMessages(List<Mensaje> messages) {
+        this.messages = messages;
+    }
+
+    public List<Reservaciones> getReservations() {
+        return reservations;
+    }
+
+    public void setReservations(List<Reservaciones> reservations) {
+        this.reservations = reservations;
+    }
+    
     
 }

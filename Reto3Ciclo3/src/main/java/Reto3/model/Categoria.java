@@ -29,10 +29,10 @@ public class Categoria implements Serializable {
         return motorbikes;
     }
 
-    public void setMotos(List<Motorbike> motorbikes) {
+    public void setMotorbikes(List<Motorbike> motorbikes) {
         this.motorbikes = motorbikes;
     }
-
+    
     public Integer getId() {
         return id;
     }
@@ -55,6 +55,10 @@ public class Categoria implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
+    }
+
+    public List<Motorbike> getMotorbikes() {
+        return motorbikes;
     }
     
 }

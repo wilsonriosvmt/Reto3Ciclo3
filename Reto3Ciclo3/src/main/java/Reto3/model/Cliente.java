@@ -91,6 +91,4 @@ public class Cliente implements Serializable {
         this.reservations = reservations;
     }
     
-    
-    
 }
