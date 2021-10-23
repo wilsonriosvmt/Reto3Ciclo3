@@ -25,10 +25,10 @@ public class Categoria implements Serializable {
     @JsonIgnoreProperties("category")
     private List<Motorbike> motorbikes;
 
-    public List<Motorbike> getMotos() {
+    public List<Motorbike> getMotorbikes() {
         return motorbikes;
     }
-
+        
     public void setMotorbikes(List<Motorbike> motorbikes) {
         this.motorbikes = motorbikes;
     }
@@ -55,10 +55,6 @@ public class Categoria implements Serializable {
 
     public void setDescription(String description) {
         this.description = description;
-    }
-
-    public List<Motorbike> getMotorbikes() {
-        return motorbikes;
     }
     
 }

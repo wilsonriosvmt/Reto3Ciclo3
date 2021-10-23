@@ -33,8 +33,8 @@ public class Motorbike implements Serializable{
     private String name;
     private String brand;
     private Integer year;
-    private Integer categoryId;
     private String description;
+    //private Integer categoryId;
 
     @ManyToOne
     @JoinColumn(name = "categoryId", insertable=false, updatable=false)
@@ -75,16 +75,6 @@ public class Motorbike implements Serializable{
     //Set para asignar el año
     public void setYear(Integer year) {
         this.year = year;
-    }
-
-    //Get para obtener el id de la catergoria
-    public Integer getCategoryId() {
-        return categoryId;
-    }
-
-    //Set para asignar el id de la categoria
-    public void setCategoryId(Integer categoryId) {
-        this.categoryId = categoryId;
     }
 
     //Get para obtener el nombre
