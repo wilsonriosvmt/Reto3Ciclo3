@@ -17,18 +17,19 @@ import javax.persistence.Table;
 @Entity
 @Table(name = "message")
 public class Mensaje implements Serializable {
+
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
     private Integer idMessage;
     private String messageText;
-    
-    @ManyToOne(optional=false)
-    @JoinColumn(name="id", insertable=false, updatable=false)
+
+    @ManyToOne
+    @JoinColumn(name = "id")
     @JsonIgnoreProperties({"messages", "client", "reservations"})
     private Motorbike motorbike;
-  
+
     @ManyToOne
-    @JoinColumn(name="clientId")
+    @JoinColumn(name = "clientId")
     @JsonIgnoreProperties({"messages", "reservations", "client"})
     private Cliente client;
 
@@ -47,13 +48,13 @@ public class Mensaje implements Serializable {
     public void setMessageText(String messageText) {
         this.messageText = messageText;
     }
-    
-    public Motorbike getMotorbike() {
+
+    public Motorbike getBike() {
         return motorbike;
     }
 
-    public void setMotorbike(Motorbike motorbike) {
-        this.motorbike = motorbike;
+    public void setBike(Motorbike bike) {
+        this.motorbike = bike;
     }
 
     public Cliente getClient() {
@@ -63,5 +64,5 @@ public class Mensaje implements Serializable {
     public void setClient(Cliente client) {
         this.client = client;
     }
-    
+
 }

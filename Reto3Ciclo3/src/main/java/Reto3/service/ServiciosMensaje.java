@@ -17,10 +17,11 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ServiciosMensaje {
+
     @Autowired
     private RepositorioMensaje metodosCrud;
 
-    public List<Mensaje> getAll(){
+    public List<Mensaje> getAll() {
         return metodosCrud.getAll();
     }
 
@@ -28,32 +29,32 @@ public class ServiciosMensaje {
         return metodosCrud.getMessage(messageId);
     }
 
-    public Mensaje save(Mensaje message){
-        if(message.getIdMessage()==null){
+    public Mensaje save(Mensaje message) {
+        if (message.getIdMessage() == null) {
             return metodosCrud.save(message);
-        }else{
-            Optional<Mensaje> e= metodosCrud.getMessage(message.getIdMessage());
-            if(e.isEmpty()){
+        } else {
+            Optional<Mensaje> e = metodosCrud.getMessage(message.getIdMessage());
+            if (e.isEmpty()) {
                 return metodosCrud.save(message);
-            }else{
+            } else {
                 return message;
             }
         }
     }
 
-    public Mensaje update(Mensaje message){
-        if(message.getIdMessage()!=null){
-            Optional<Mensaje> e= metodosCrud.getMessage(message.getIdMessage());
-            if(!e.isEmpty()){
-                if(message.getMessageText()!=null){
+    public Mensaje update(Mensaje message) {
+        if (message.getIdMessage() != null) {
+            Optional<Mensaje> e = metodosCrud.getMessage(message.getIdMessage());
+            if (!e.isEmpty()) {
+                if (message.getMessageText() != null) {
                     e.get().setMessageText(message.getMessageText());
                 }
                 metodosCrud.save(e.get());
                 return e.get();
-            }else{
+            } else {
                 return message;
             }
-        }else{
+        } else {
             return message;
         }
     }
