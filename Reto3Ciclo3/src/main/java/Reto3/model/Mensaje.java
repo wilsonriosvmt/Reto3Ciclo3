@@ -53,8 +53,8 @@ public class Mensaje implements Serializable {
         return motorbike;
     }
 
-    public void setBike(Motorbike bike) {
-        this.motorbike = bike;
+    public void setBike(Motorbike motorbike) {
+        this.motorbike = motorbike;
     }
 
     public Cliente getClient() {
