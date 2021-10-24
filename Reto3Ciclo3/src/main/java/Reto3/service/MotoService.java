@@ -60,8 +60,8 @@ public class MotoService {
                 if(motorbike.getDescription()!=null){
                     e.get().setDescription(motorbike.getDescription());
                 }
-                if(motorbike.getCategoryId()!=null){
-                    e.get().setCategoryId(motorbike.getCategoryId());
+                if(motorbike.getCategory()!=null){
+                    e.get().setCategory(motorbike.getCategory());
                 }
                 motoRepository.save(e.get());
                 return e.get();
