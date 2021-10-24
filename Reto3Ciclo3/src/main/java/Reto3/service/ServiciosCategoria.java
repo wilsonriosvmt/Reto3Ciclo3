@@ -17,7 +17,8 @@ import org.springframework.stereotype.Service;
  */
 @Service
 public class ServiciosCategoria {
-     @Autowired
+
+    @Autowired
     private RepositorioCategoria metodosCrud;
 
     public List<Categoria> getAll() {
@@ -29,7 +30,7 @@ public class ServiciosCategoria {
     }
 
     public Categoria save(Categoria categoria) {
-        if (categoria.getId()== null) {
+        if (categoria.getId() == null) {
             return metodosCrud.save(categoria);
         } else {
             Optional<Categoria> categoria1 = metodosCrud.getCategoria(categoria.getId());
@@ -41,14 +42,14 @@ public class ServiciosCategoria {
         }
     }
 
-    public Categoria update(Categoria categoria){
-        if(categoria.getId()!=null){
-            Optional<Categoria>g=metodosCrud.getCategoria(categoria.getId());
-            if(!g.isEmpty()){
-                if(categoria.getDescription()!=null){
+    public Categoria update(Categoria categoria) {
+        if (categoria.getId() != null) {
+            Optional<Categoria> g = metodosCrud.getCategoria(categoria.getId());
+            if (!g.isEmpty()) {
+                if (categoria.getDescription() != null) {
                     g.get().setDescription(categoria.getDescription());
                 }
-                if(categoria.getName()!=null){
+                if (categoria.getName() != null) {
                     g.get().setName(categoria.getName());
                 }
                 return metodosCrud.save(g.get());
@@ -56,12 +57,13 @@ public class ServiciosCategoria {
         }
         return categoria;
     }
-    public boolean deletecategoria(int categoriaId){
-        Boolean d=getCategoria(categoriaId).map(categoria -> {
+
+    public boolean deletecategoria(int categoriaId) {
+        Boolean d = getCategoria(categoriaId).map(categoria -> {
             metodosCrud.delete(categoria);
             return true;
         }).orElse(false);
         return d;
     }
-    
+
 }

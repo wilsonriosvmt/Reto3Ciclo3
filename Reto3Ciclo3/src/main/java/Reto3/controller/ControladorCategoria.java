@@ -28,13 +28,15 @@ import org.springframework.web.bind.annotation.RestController;
  */
 @RestController
 @RequestMapping("/api/Category")
-@CrossOrigin(origins = "*", methods= {RequestMethod.GET,RequestMethod.POST,RequestMethod.PUT,RequestMethod.DELETE})
+@CrossOrigin(origins = "*", methods = {RequestMethod.GET, RequestMethod.POST, RequestMethod.PUT, RequestMethod.DELETE})
 
 public class ControladorCategoria {
-      @Autowired
+
+    @Autowired
     private ServiciosCategoria servicio;
+
     @GetMapping("/all")
-    public List<Categoria> getCategoria(){
+    public List<Categoria> getCategoria() {
         return servicio.getAll();
     }
 
@@ -48,6 +50,7 @@ public class ControladorCategoria {
     public Categoria save(@RequestBody Categoria categoria) {
         return servicio.save(categoria);
     }
+
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
     public Categoria update(@RequestBody Categoria categoria) {
@@ -59,5 +62,5 @@ public class ControladorCategoria {
     public boolean delete(@PathVariable("id") int categoriaId) {
         return servicio.deletecategoria(categoriaId);
     }
-    
+
 }
