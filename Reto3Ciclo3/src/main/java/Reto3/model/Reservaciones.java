@@ -42,7 +42,7 @@ public class Reservaciones implements Serializable  {
     @JsonIgnoreProperties({"reservations","messages"})
     private Cliente client;
 
-    //private String score; //depende el grupo
+    private String score; //depende el grupo
 
     public Motorbike getMotorbike() {
         return motorbike;
