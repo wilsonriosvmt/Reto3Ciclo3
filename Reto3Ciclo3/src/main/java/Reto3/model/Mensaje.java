@@ -49,11 +49,11 @@ public class Mensaje implements Serializable {
         this.messageText = messageText;
     }
 
-    public Motorbike getBike() {
+    public Motorbike getMotorbike() {
         return motorbike;
     }
 
-    public void setBike(Motorbike motorbike) {
+    public void setMotorbike(Motorbike motorbike) {
         this.motorbike = motorbike;
     }
 
@@ -64,5 +64,5 @@ public class Mensaje implements Serializable {
     public void setClient(Cliente client) {
         this.client = client;
     }
-
+    
 }
