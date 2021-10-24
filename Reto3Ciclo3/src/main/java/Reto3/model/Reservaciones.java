@@ -92,7 +92,6 @@ public class Reservaciones implements Serializable  {
         this.client = client;
     }
 
-    /*
     public String getScore() {
         return score;
     }
@@ -100,6 +99,5 @@ public class Reservaciones implements Serializable  {
     public void setScore(String score) {
         this.score = score;
     }
-    */
     
 }
