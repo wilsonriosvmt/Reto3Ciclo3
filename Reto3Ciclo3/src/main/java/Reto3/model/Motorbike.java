@@ -37,7 +37,7 @@ public class Motorbike implements Serializable{
     //private Integer categoryId;
 
     @ManyToOne
-    @JoinColumn(name = "categoryId", insertable=false, updatable=false)
+    @JoinColumn(name = "categoryId")
     @JsonIgnoreProperties("motorbikes")
     private Categoria category;
 
