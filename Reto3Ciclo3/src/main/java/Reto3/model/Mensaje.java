@@ -19,33 +19,25 @@ import javax.persistence.Table;
 public class Mensaje implements Serializable {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Integer id;
+    private Integer idMessage;
     private String messageText;
     
     @ManyToOne(optional=false)
     @JoinColumn(name="id", insertable=false, updatable=false)
     @JsonIgnoreProperties({"messages", "client", "reservations"})
     private Motorbike motorbike;
-        
-    public Motorbike getMotorbike() {
-        return motorbike;
-    }
-
-    public void setMotorbike(Motorbike motorbike) {
-        this.motorbike = motorbike;
-    }
   
     @ManyToOne
     @JoinColumn(name="clientId")
     @JsonIgnoreProperties({"messages", "reservations", "client"})
     private Cliente client;
 
-    public Integer getId() {
-        return id;
+    public Integer getIdMessage() {
+        return idMessage;
     }
 
-    public void setId(Integer idMessage) {
-        this.id = idMessage;
+    public void setIdMessage(Integer idMessage) {
+        this.idMessage = idMessage;
     }
 
     public String getMessageText() {
@@ -54,6 +46,14 @@ public class Mensaje implements Serializable {
 
     public void setMessageText(String messageText) {
         this.messageText = messageText;
+    }
+    
+    public Motorbike getMotorbike() {
+        return motorbike;
+    }
+
+    public void setMotorbike(Motorbike motorbike) {
+        this.motorbike = motorbike;
     }
 
     public Cliente getClient() {

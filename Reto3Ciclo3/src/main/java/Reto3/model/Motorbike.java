@@ -48,6 +48,7 @@ public class Motorbike implements Serializable{
     @OneToMany(cascade = {CascadeType.PERSIST},mappedBy = "motorbike")
     @JsonIgnoreProperties({"motorbike", "client"})
     private List<Reservaciones> reservations;
+    
     public Integer getId() {
         return id;
     }
@@ -120,6 +121,5 @@ public class Motorbike implements Serializable{
     public void setReservations(List<Reservaciones> reservations) {
         this.reservations = reservations;
     }
-    
     
 }

@@ -37,6 +37,13 @@ public class Reservaciones implements Serializable  {
     @JsonIgnoreProperties("reservations")
     private Motorbike motorbike;
 
+    @ManyToOne
+    @JoinColumn(name = "idClient")
+    @JsonIgnoreProperties({"reservations","messages"})
+    private Cliente client;
+
+    //private String score; //depende el grupo
+
     public Motorbike getMotorbike() {
         return motorbike;
     }
@@ -44,13 +51,6 @@ public class Reservaciones implements Serializable  {
     public void setMotorbike(Motorbike motorbike) {
         this.motorbike = motorbike;
     }
-
-    @ManyToOne
-    @JoinColumn(name = "idClient")
-    @JsonIgnoreProperties({"reservations","messages"})
-    private Cliente client;
-
-    private String score; //depende el grupo
 
     public Integer getIdReservation() {
         return idReservation;
@@ -92,6 +92,7 @@ public class Reservaciones implements Serializable  {
         this.client = client;
     }
 
+    /*
     public String getScore() {
         return score;
     }
@@ -99,5 +100,6 @@ public class Reservaciones implements Serializable  {
     public void setScore(String score) {
         this.score = score;
     }
+    */
     
 }

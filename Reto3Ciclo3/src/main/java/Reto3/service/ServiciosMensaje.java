@@ -29,10 +29,10 @@ public class ServiciosMensaje {
     }
 
     public Mensaje save(Mensaje message){
-        if(message.getId()==null){
+        if(message.getIdMessage()==null){
             return metodosCrud.save(message);
         }else{
-            Optional<Mensaje> e= metodosCrud.getMessage(message.getId());
+            Optional<Mensaje> e= metodosCrud.getMessage(message.getIdMessage());
             if(e.isEmpty()){
                 return metodosCrud.save(message);
             }else{
@@ -42,8 +42,8 @@ public class ServiciosMensaje {
     }
 
     public Mensaje update(Mensaje message){
-        if(message.getId()!=null){
-            Optional<Mensaje> e= metodosCrud.getMessage(message.getId());
+        if(message.getIdMessage()!=null){
+            Optional<Mensaje> e= metodosCrud.getMessage(message.getIdMessage());
             if(!e.isEmpty()){
                 if(message.getMessageText()!=null){
                     e.get().setMessageText(message.getMessageText());
