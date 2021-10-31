@@ -69,7 +69,7 @@ public class ControladorReservaciones {
         return servicio.reporteTiempoServicios(dateOne,dateTwo);
     }
     
-    @GetMapping("/report-clientes")
+    @GetMapping("/report-clients")
     public List<ContadorClientes> getClientes(){
         return servicio.reporteClientesServicios();
     }
