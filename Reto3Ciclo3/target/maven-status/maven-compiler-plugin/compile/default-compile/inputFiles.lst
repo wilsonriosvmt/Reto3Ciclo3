@@ -10,6 +10,7 @@ C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\servi
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\interfaces\InterfaceMensaje.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\model\Cliente.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\model\Motorbike.java
+C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\security\SecurityAdapter.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\repository\crud\RepositorioCategoria.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\service\ServiciosCliente.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\controller\ControladorReservaciones.java
@@ -19,10 +20,12 @@ C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\contr
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\controller\ControladorCliente.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\service\ServiciosMensaje.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\model\Categoria.java
+C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\model\ContadorClientes.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\service\ServiciosReservaciones.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\repository\crud\RepositorioMensaje.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\repository\crud\MotoRepository.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\model\Mensaje.java
+C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\model\StatusReservas.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\controller\MotoController.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\Reto3Application.java
 C:\Users\Will\Documents\GitHub\Reto3Ciclo3\Reto3Ciclo3\src\main\java\Reto3\service\MotoService.java
