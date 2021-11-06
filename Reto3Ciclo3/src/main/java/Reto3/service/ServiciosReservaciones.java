@@ -25,21 +25,29 @@ import org.springframework.stereotype.Service;
 @Service
 public class ServiciosReservaciones {
 
+    /**
+     * método que permite cargar los mpetodos CRUD de reservaciones
+     */
     @Autowired
     private RepositorioReservaciones metodosCrud;
 
-    
-    //Método getAll, lista todos los registros de la entidad Reservaciones
+    /**
+     * método que permite obtener una lista de todas las reservaciones
+     */
     public List<Reservaciones> getAll() {
         return metodosCrud.getAll();
     }
 
-    //Método deleteReservation, recibe una entidad de tipo Reservaciones
+    /**
+     * método que permite cobtener una reservacion por su ID
+     */
     public Optional<Reservaciones> getReservation(int reservationId) {
         return metodosCrud.getReservation(reservationId);
     }
 
-    //Método save, recibe una entidad de tipo Reservaciones
+    /**
+     * método que permite guardar una reservación
+     */
     public Reservaciones save(Reservaciones reservation) {
         if (reservation.getIdReservation() == null) {
             return metodosCrud.save(reservation);
@@ -53,7 +61,9 @@ public class ServiciosReservaciones {
         }
     }
 
-    //Método update, recibe una entidad de tipo Reservaciones
+    /**
+     * método que permite actualizar una reservación
+     */
     public Reservaciones update(Reservaciones reservation) {
         if (reservation.getIdReservation() != null) {
             Optional<Reservaciones> e = metodosCrud.getReservation(reservation.getIdReservation());
@@ -78,7 +88,9 @@ public class ServiciosReservaciones {
         }
     }
 
-    //Método deleteReservation, recibe una entidad de tipo Reservaciones
+    /**
+     * método que permite eliminar un registro de reservación
+     */
     public boolean deleteReservation(int reservationId) {
         Boolean aBoolean = getReservation(reservationId).map(reservation -> {
             metodosCrud.delete(reservation);
@@ -94,7 +106,9 @@ public class ServiciosReservaciones {
         return new StatusReservas(completed.size(), cancelled.size());
     }
     
-    //Método deleteReservation, recibe una entidad de tipo Reservaciones
+    /**
+     * método que permite obtener un reporte de reservaciones entre dos fechas dadas
+     */
     public List<Reservaciones> reporteTiempoServicios(String dateA, String dateB) {
         SimpleDateFormat parser = new SimpleDateFormat("yyyy-MM-dd");
         Date a = new Date();
@@ -112,7 +126,9 @@ public class ServiciosReservaciones {
         }
     }
     
-    //Método deleteReservation, recibe una entidad de tipo Reservaciones
+    /**
+     * método que permite obtener un reporte de servicios por clientes
+     */
     public List<ContadorClientes> reporteClientesServicios(){
         return metodosCrud.getClientesRepositorio();
     }

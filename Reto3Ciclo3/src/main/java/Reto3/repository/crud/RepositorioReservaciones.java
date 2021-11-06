@@ -54,4 +54,18 @@ public class RepositorioReservaciones {
         return res;
     }
     
+    /*
+    public List<ContadorClientes> getClientesRepositorio(){
+        List<ContadorClientes> res =new ArrayList<>();
+        List<Object[]> report = crud4.countTotalReservationsByClient();
+        for(int i=0; i<report.size(); i++){
+
+            res.add(new ContadorClientes((long)report.get(i)[1],(Cliente) report.get(i)[0]));
+        }
+
+        return res;
+        
+    }
+    */
+    
 }
