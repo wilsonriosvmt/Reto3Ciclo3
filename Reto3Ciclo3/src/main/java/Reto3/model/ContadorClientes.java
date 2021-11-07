@@ -10,11 +10,11 @@ package Reto3.model;
  */
 public class ContadorClientes {
     private Long total;
-    private Cliente cliente;
+    private Cliente client;
 
     public ContadorClientes(Long total, Cliente cliente) {
         this.total = total;
-        this.cliente = cliente;
+        this.client = cliente;
     }
 
     public Long getTotal() {
@@ -26,11 +26,11 @@ public class ContadorClientes {
     }
 
     public Cliente getCliente() {
-        return cliente;
+        return client;
     }
 
     public void setCliente(Cliente cliente) {
-        this.cliente = cliente;
+        this.client = cliente;
     }
     
     
