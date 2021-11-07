@@ -4,13 +4,13 @@
  */
 package Reto3.interfaces;
 
-import Reto3.model.Cliente;
+import Reto3.model.Client;
 import org.springframework.data.repository.CrudRepository;
 
 /**
  *
  * @author USUARIO
  */
-public interface InterfaceCliente extends CrudRepository<Cliente,Integer> {
+public interface InterfaceCliente extends CrudRepository<Client,Integer> {
     
 }

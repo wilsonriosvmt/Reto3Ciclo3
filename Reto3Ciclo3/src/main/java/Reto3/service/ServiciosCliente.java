@@ -4,7 +4,7 @@
  */
 package Reto3.service;
 
-import Reto3.model.Cliente;
+import Reto3.model.Client;
 import Reto3.repository.crud.RepositorioCliente;
 import java.util.List;
 import java.util.Optional;
@@ -20,19 +20,19 @@ public class ServiciosCliente {
        @Autowired
      private RepositorioCliente metodosCrud;
      
-     public List<Cliente> getAll(){
+     public List<Client> getAll(){
         return metodosCrud.getAll();
     }
      
-      public Optional<Cliente> getClient(int clientId) {
+      public Optional<Client> getClient(int clientId) {
         return metodosCrud.getCliente(clientId);
     }
 
-    public Cliente save(Cliente client){
+    public Client save(Client client){
         if(client.getIdClient()==null){
             return metodosCrud.save(client);
         }else{
-            Optional<Cliente> e= metodosCrud.getCliente(client.getIdClient());
+            Optional<Client> e= metodosCrud.getCliente(client.getIdClient());
             if(e.isEmpty()){
                 return metodosCrud.save(client);
             }else{
@@ -41,9 +41,9 @@ public class ServiciosCliente {
         }
     }
 
-    public Cliente update(Cliente client){
+    public Client update(Client client){
         if(client.getIdClient()!=null){
-            Optional<Cliente> e= metodosCrud.getCliente(client.getIdClient());
+            Optional<Client> e= metodosCrud.getCliente(client.getIdClient());
             if(!e.isEmpty()){
                 if(client.getName()!=null){
                     e.get().setName(client.getName());

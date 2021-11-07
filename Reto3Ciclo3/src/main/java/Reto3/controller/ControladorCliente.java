@@ -4,7 +4,7 @@
  */
 package Reto3.controller;
 
-import Reto3.model.Cliente;
+import Reto3.model.Client;
 import Reto3.service.ServiciosCliente;
 import java.util.List;
 import java.util.Optional;
@@ -35,23 +35,23 @@ public class ControladorCliente {
     private ServiciosCliente servicio;
   
     @GetMapping("/all")
-    public List<Cliente> getClients(){
+    public List<Client> getClients(){
         return servicio.getAll();
     }
 
     @GetMapping("/{id}")
-    public Optional<Cliente> getClient(@PathVariable("id") int clientId) {
+    public Optional<Client> getClient(@PathVariable("id") int clientId) {
         return servicio.getClient(clientId);
     }
 
     @PostMapping("/save")
     @ResponseStatus(HttpStatus.CREATED)
-    public Cliente save(@RequestBody Cliente client) {
+    public Client save(@RequestBody Client client) {
         return servicio.save(client);
     }
     @PutMapping("/update")
     @ResponseStatus(HttpStatus.CREATED)
-    public Cliente update(@RequestBody Cliente client) {
+    public Client update(@RequestBody Client client) {
         return servicio.update(client);
     }
 

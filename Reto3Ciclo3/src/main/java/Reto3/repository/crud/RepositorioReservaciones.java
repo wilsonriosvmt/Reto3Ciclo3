@@ -5,7 +5,7 @@
 package Reto3.repository.crud;
 
 import Reto3.interfaces.InterfaceReservaciones;
-import Reto3.model.Cliente;
+import Reto3.model.Client;
 import Reto3.model.ContadorClientes;
 import Reto3.model.Reservaciones;
 import java.util.ArrayList;
@@ -44,28 +44,19 @@ public class RepositorioReservaciones {
     public List<Reservaciones> ReservacionTiempoRepositorio(Date a, Date b){
         return crud4.findAllByStartDateAfterAndStartDateBefore(a, b);
     }
-    
-    public List<ContadorClientes> getClientesRepositorio(){
-        List<ContadorClientes> res=new ArrayList<>();
-        List<Object[]> report= crud4.countTotalReservationsByClient();
-        for(int i=0;i<report.size();i++){
-            res.add(new ContadorClientes((Long)report.get(i)[1],(Cliente) report.get(i)[0] ));
-        }
-        return res;
-    }
-    
-    /*
+        
     public List<ContadorClientes> getClientesRepositorio(){
         List<ContadorClientes> res =new ArrayList<>();
         List<Object[]> report = crud4.countTotalReservationsByClient();
+        System.out.println("report="+report);
         for(int i=0; i<report.size(); i++){
 
-            res.add(new ContadorClientes((long)report.get(i)[1],(Cliente) report.get(i)[0]));
+            res.add(new ContadorClientes((long)report.get(i)[1],(Client)report.get(i)[0]));
         }
 
         return res;
         
     }
-    */
+    
     
 }

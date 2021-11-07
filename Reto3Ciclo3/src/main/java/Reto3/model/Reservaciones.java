@@ -4,7 +4,7 @@
  */
 package Reto3.model;
 
-import Reto3.model.Cliente;
+import Reto3.model.Client;
 import Reto3.model.Motorbike;
 import com.fasterxml.jackson.annotation.JsonIgnoreProperties;
 import java.io.Serializable;
@@ -40,7 +40,7 @@ public class Reservaciones implements Serializable  {
     @ManyToOne
     @JoinColumn(name = "idClient")
     @JsonIgnoreProperties({"reservations","messages"})
-    private Cliente client;
+    private Client client;
 
     private String score; //depende el grupo
 
@@ -84,11 +84,11 @@ public class Reservaciones implements Serializable  {
         this.status = status;
     }
 
-    public Cliente getClient() {
+    public Client getClient() {
         return client;
     }
 
-    public void setClient(Cliente client) {
+    public void setClient(Client client) {
         this.client = client;
     }
 
