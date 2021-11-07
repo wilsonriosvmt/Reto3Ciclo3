@@ -12,9 +12,9 @@ public class ContadorClientes {
     private Long total;
     private Cliente client;
 
-    public ContadorClientes(Long total, Cliente cliente) {
+    public ContadorClientes(Long total, Cliente client) {
         this.total = total;
-        this.client = cliente;
+        this.client = client;
     }
 
     public Long getTotal() {
@@ -29,8 +29,8 @@ public class ContadorClientes {
         return client;
     }
 
-    public void setCliente(Cliente cliente) {
-        this.client = cliente;
+    public void setCliente(Cliente client) {
+        this.client = client;
     }
     
     
